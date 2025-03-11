@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServiceRecipe" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServiceRecipe" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfGetAllFoodName">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetAllFoodName" nillable="true" type="tns:GetAllFoodName" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetAllFoodName" nillable="true" type="tns:ArrayOfGetAllFoodName" />
+  <xs:complexType name="GetAllFoodName">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FoodName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetAllFoodName" nillable="true" type="tns:GetAllFoodName" />
+  <xs:complexType name="Recipes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FoodName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RawMaterial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Recipe" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Recipes" nillable="true" type="tns:Recipes" />
+  <xs:complexType name="RecipesDelete">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FoodName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RecipesDelete" nillable="true" type="tns:RecipesDelete" />
+</xs:schema>
