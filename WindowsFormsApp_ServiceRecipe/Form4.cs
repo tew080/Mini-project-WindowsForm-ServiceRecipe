@@ -46,6 +46,9 @@ namespace WindowsFormsApp_ServiceRecipe
             {
                 MessageBox.Show("เกิดข้อผิดพลาด: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            foodname.Clear();
+
         }
     }
 }

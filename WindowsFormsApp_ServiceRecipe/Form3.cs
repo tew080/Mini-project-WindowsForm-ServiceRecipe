@@ -13,23 +13,44 @@ namespace WindowsFormsApp_ServiceRecipe
 {
     public partial class Form3 : Form
     {
+        ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
+
         public Form3()
         {
-            ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
             InitializeComponent();
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
-            int foodId = int.Parse(foodID.Text); 
-            SearchAndUpdate updata = new SearchAndUpdate
+            try
             {
-                FoodName= foodname.Text,        // ชื่ออาหารใหม่
-                Recipe = Recipe.Text,        // วิธีทำใหม่
-                RawMaterial = Raw_material.Text // วัตถุดิบใหม่
-            };
-            // เรียกใช้เมทอด UpdateDataFood เพื่ออัปเดตข้อมูล
-            client.UpdateDataFood(updata);
+                int foodId = int.Parse(foodid.Text);
+                string FoodName_input = foodname.Text.Trim();
+                string RawMaterial_input = rawmaterial.Text.Trim();
+                string Recipe_input = recipe.Text.Trim();
+
+                SearchAndUpdate updata = new SearchAndUpdate
+                {
+                    FoodID = foodId,
+                    FoodName = FoodName_input,
+                    RawMaterial = RawMaterial_input,
+                    Recipe = Recipe_input
+
+                };
+
+                // เรียกใช้เมทอด UpdateDataFood เพื่ออัปเดตข้อมูล
+                client.UpdateDataFood(updata);
+
+                MessageBox.Show("เพิ่มเมนูสำเร็จ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("ข้อผิดพลาด", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            foodid.Clear();
+            foodname.Clear();
+            rawmaterial.Clear();
+            recipe.Clear();
         }
     }
 }

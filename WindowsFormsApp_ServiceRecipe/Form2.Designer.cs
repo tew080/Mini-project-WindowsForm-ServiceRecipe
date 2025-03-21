@@ -31,11 +31,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.foodname = new System.Windows.Forms.TextBox();
-            this.rawmaterial = new System.Windows.Forms.TextBox();
             this.recipe = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.rawmaterial = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label2
@@ -74,20 +74,6 @@
             this.foodname.Size = new System.Drawing.Size(223, 257);
             this.foodname.TabIndex = 14;
             this.foodname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // rawmaterial
-            // 
-            this.rawmaterial.AcceptsReturn = true;
-            this.rawmaterial.AcceptsTab = true;
-            this.rawmaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.rawmaterial.Location = new System.Drawing.Point(522, 261);
-            this.rawmaterial.Margin = new System.Windows.Forms.Padding(2);
-            this.rawmaterial.Multiline = true;
-            this.rawmaterial.Name = "rawmaterial";
-            this.rawmaterial.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.rawmaterial.Size = new System.Drawing.Size(223, 257);
-            this.rawmaterial.TabIndex = 17;
-            this.rawmaterial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // recipe
             // 
@@ -133,16 +119,30 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "สูตรอาหาร";
             // 
+            // rawmaterial
+            // 
+            this.rawmaterial.AcceptsReturn = true;
+            this.rawmaterial.AcceptsTab = true;
+            this.rawmaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.rawmaterial.Location = new System.Drawing.Point(517, 261);
+            this.rawmaterial.Margin = new System.Windows.Forms.Padding(2);
+            this.rawmaterial.Multiline = true;
+            this.rawmaterial.Name = "rawmaterial";
+            this.rawmaterial.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.rawmaterial.Size = new System.Drawing.Size(223, 257);
+            this.rawmaterial.TabIndex = 22;
+            this.rawmaterial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 750);
+            this.Controls.Add(this.rawmaterial);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.recipe);
-            this.Controls.Add(this.rawmaterial);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.foodname);
@@ -157,10 +157,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox foodname;
-        private System.Windows.Forms.TextBox rawmaterial;
         private System.Windows.Forms.TextBox recipe;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox rawmaterial;
     }
 }
