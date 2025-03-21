@@ -7,38 +7,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp_ServiceRecipe.ServiceRecipe;
+using WindowsFormsApp_ServiceRecipe.ServiceReference1;
 
 namespace WindowsFormsApp_ServiceRecipe
 {
     public partial class Form1 : Form
     {
-        ServiceRecipe.Service1Client client = new ServiceRecipe.Service1Client();
+
 
         public Form1()
         {
+            ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
+
+
             InitializeComponent();
         }
 
         private void GetAllFoodName_Click(object sender, EventArgs e)
         {
+            ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
             // เรียกใช้ WCF Service เพื่อดึงรายการสินค้า
-            GetAllFoodName[] FoodNames = client.GetAllFoodName();
+            ShowAll[] FoodNames = client.ShowAllFoods();
 
             if (FoodNames != null && FoodNames.Length > 0)
             {
                 // ล้าง DataGridView ก่อนเพิ่มข้อมูลใหม่
-                dgvFoodName.Rows.Clear();
-                dgvFoodName.Columns.Clear();
+                Dataview.Rows.Clear();
+                Dataview.Columns.Clear();
 
                 // ก าหนดคอลัมน์เอง
-                dgvFoodName.Columns.Add("FoodName","รายชื่อเมนู");
+                Dataview.Columns.Add("FoodID", "รหัสอาหาร");
+                Dataview.Columns.Add("FoodName", "รายชื่อเมนู");
 
 
                 // เพิ่มข้อมูลเข้าไปทีละแถว
                 foreach (var product in FoodNames)
                 {
-                    dgvFoodName.Rows.Add(product.FoodName);
+                    Dataview.Rows.Add(product.FoodID, product.FoodName);
                 }
             }
             else
@@ -78,5 +83,41 @@ namespace WindowsFormsApp_ServiceRecipe
             // เพิ่ม event handler เมื่อฟอร์ม 2 ถูกปิด ให้แสดงฟอร์ม 1 อีกครั้ง
             form4.FormClosed += (s, args) => this.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
+
+            {
+                string menuName = txtSearchMenu.Text; // รับค่าจากช่องค้นหา
+
+                //var recipe = client.SearchFoodName(); // ดึงข้อมูลจาก Web Service โดยไม่ส่ง parameter
+
+                SearchAndUpdate products = client.SearchFoodName(menuName);
+
+                if (products != null)
+                {
+                    // ล้าง DataGridView ก่อนเพิ่มข้อมูลใหม่
+                    dataGridView1.Rows.Clear();
+
+                    dataGridView1.Columns.Clear();
+
+                    // txtMethod.Text = food.Recipe; // แสดงวิธีทำ
+                    // txtraw.Text = food.RawMaterial; // แสดงวัตถุดิบ
+
+                    dataGridView1.Columns.Add("FoodName", "ชื่ออาหาร");
+                    dataGridView1.Columns.Add("RawMaterial", "วัตถุดิบ");
+                    dataGridView1.Columns.Add("Recipe", "สูตรอาหาร");
+
+                    dataGridView1.Rows.Add(products.FoodName, products.RawMaterial, products.Recipe);
+
+                }
+                else
+                {
+                    MessageBox.Show("ไม่พบเมนูนี้", "แจ้งเตือน", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
     }
 }
+
