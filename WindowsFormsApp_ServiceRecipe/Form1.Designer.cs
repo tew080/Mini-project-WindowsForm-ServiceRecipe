@@ -45,9 +45,10 @@
             // 
             // GetAllFoodName
             // 
-            this.GetAllFoodName.Location = new System.Drawing.Point(89, 429);
+            this.GetAllFoodName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.GetAllFoodName.Location = new System.Drawing.Point(66, 110);
             this.GetAllFoodName.Name = "GetAllFoodName";
-            this.GetAllFoodName.Size = new System.Drawing.Size(177, 40);
+            this.GetAllFoodName.Size = new System.Drawing.Size(223, 63);
             this.GetAllFoodName.TabIndex = 0;
             this.GetAllFoodName.Text = "แสดงเมนูทั้งหมด";
             this.GetAllFoodName.UseVisualStyleBackColor = true;
@@ -56,8 +57,11 @@
             // Dataview
             // 
             this.Dataview.AllowUserToOrderColumns = true;
+            this.Dataview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Dataview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Dataview.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.Dataview.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.Dataview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Dataview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -68,10 +72,11 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dataview.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Dataview.Location = new System.Drawing.Point(66, 81);
+            this.Dataview.Location = new System.Drawing.Point(63, 213);
             this.Dataview.MaximumSize = new System.Drawing.Size(220, 330);
             this.Dataview.MinimumSize = new System.Drawing.Size(220, 330);
             this.Dataview.Name = "Dataview";
+            this.Dataview.ReadOnly = true;
             this.Dataview.RowHeadersVisible = false;
             this.Dataview.RowHeadersWidth = 51;
             this.Dataview.RowTemplate.Height = 24;
@@ -80,9 +85,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(536, 81);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button1.Location = new System.Drawing.Point(667, 65);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 50);
+            this.button1.Size = new System.Drawing.Size(154, 50);
             this.button1.TabIndex = 2;
             this.button1.Text = "ค้นหาเมนู";
             this.button1.UseVisualStyleBackColor = true;
@@ -90,9 +96,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(683, 94);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button2.Location = new System.Drawing.Point(1003, 341);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(158, 35);
+            this.button2.Size = new System.Drawing.Size(193, 90);
             this.button2.TabIndex = 3;
             this.button2.Text = "ลบข้อมูล";
             this.button2.UseVisualStyleBackColor = true;
@@ -100,9 +107,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(683, 53);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button3.Location = new System.Drawing.Point(1003, 230);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(158, 35);
+            this.button3.Size = new System.Drawing.Size(193, 90);
             this.button3.TabIndex = 4;
             this.button3.Text = "อัพเดทข้อมูล";
             this.button3.UseVisualStyleBackColor = true;
@@ -110,9 +118,10 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(683, 12);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button4.Location = new System.Drawing.Point(1003, 121);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(158, 35);
+            this.button4.Size = new System.Drawing.Size(193, 90);
             this.button4.TabIndex = 5;
             this.button4.Text = "เพิ่มข้อมูล";
             this.button4.UseVisualStyleBackColor = true;
@@ -120,7 +129,7 @@
             // 
             // txtSearchMenu
             // 
-            this.txtSearchMenu.Location = new System.Drawing.Point(336, 94);
+            this.txtSearchMenu.Location = new System.Drawing.Point(467, 78);
             this.txtSearchMenu.Name = "txtSearchMenu";
             this.txtSearchMenu.Size = new System.Drawing.Size(175, 22);
             this.txtSearchMenu.TabIndex = 6;
@@ -153,7 +162,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(320, 149);
+            this.dataGridView1.Location = new System.Drawing.Point(427, 121);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
@@ -161,14 +170,14 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.RowTemplate.ReadOnly = true;
             this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.Size = new System.Drawing.Size(492, 374);
+            this.dataGridView1.Size = new System.Drawing.Size(493, 492);
             this.dataGridView1.TabIndex = 14;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 545);
+            this.ClientSize = new System.Drawing.Size(1258, 750);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSearchMenu);

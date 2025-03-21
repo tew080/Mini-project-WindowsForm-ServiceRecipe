@@ -48,7 +48,7 @@ namespace WindowsFormsApp_ServiceRecipe
             }
             else
             {
-                MessageBox.Show("No products found.", "Info", MessageBoxButtons.OK,
+                MessageBox.Show("No FoodNames found.", "Info", MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
 
             }
@@ -93,9 +93,9 @@ namespace WindowsFormsApp_ServiceRecipe
 
                 //var recipe = client.SearchFoodName(); // ดึงข้อมูลจาก Web Service โดยไม่ส่ง parameter
 
-                SearchAndUpdate products = client.SearchFoodName(menuName);
+                SearchAndUpdate food = client.SearchFoodName(menuName);
 
-                if (products != null)
+                if (food != null)
                 {
                     // ล้าง DataGridView ก่อนเพิ่มข้อมูลใหม่
                     dataGridView1.Rows.Clear();
@@ -109,7 +109,7 @@ namespace WindowsFormsApp_ServiceRecipe
                     dataGridView1.Columns.Add("RawMaterial", "วัตถุดิบ");
                     dataGridView1.Columns.Add("Recipe", "สูตรอาหาร");
 
-                    dataGridView1.Rows.Add(products.FoodName, products.RawMaterial, products.Recipe);
+                    dataGridView1.Rows.Add(food.FoodName, food.RawMaterial, food.Recipe);
 
                 }
                 else

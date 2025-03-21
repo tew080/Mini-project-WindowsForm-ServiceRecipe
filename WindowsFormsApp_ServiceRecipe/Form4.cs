@@ -17,23 +17,30 @@ namespace WindowsFormsApp_ServiceRecipe
         public Form4()
         {
             InitializeComponent();
-        }  
+        }
 
         private void Delete_Click(object sender, EventArgs e)
         {
-
-            string FoodName_input = foodname.Text.Trim();
-
-
-            DeleteData newData = new DeleteData
+            try
             {
-                FoodName = FoodName_input,
-            };
+                string FoodName_input = foodname.Text.Trim();
 
-            client.DeleteDataFood(newData);
 
-            MessageBox.Show("Delete successfully!", "Success", MessageBoxButtons.OK,
-            MessageBoxIcon.Information);
+                DeleteData newData = new DeleteData
+                {
+                    FoodName = FoodName_input,
+                };
+
+                client.DeleteDataFood(newData);
+
+                MessageBox.Show("Delete successfully!", "Success", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("ชื่อซ้ำกัน!", "Success", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+            }
         }
     }
 }
