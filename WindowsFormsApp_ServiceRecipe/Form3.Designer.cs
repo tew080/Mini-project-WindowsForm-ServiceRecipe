@@ -65,7 +65,7 @@
             // 
             this.foodid.AcceptsReturn = true;
             this.foodid.AcceptsTab = true;
-            this.foodid.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.foodid.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F);
             this.foodid.Location = new System.Drawing.Point(115, 288);
             this.foodid.Multiline = true;
             this.foodid.Name = "foodid";
@@ -76,7 +76,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.label1.Location = new System.Drawing.Point(506, 50);
+            this.label1.Location = new System.Drawing.Point(543, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(191, 46);
             this.label1.TabIndex = 17;
@@ -96,7 +96,7 @@
             // 
             this.foodname.AcceptsReturn = true;
             this.foodname.AcceptsTab = true;
-            this.foodname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.foodname.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F);
             this.foodname.Location = new System.Drawing.Point(353, 222);
             this.foodname.Multiline = true;
             this.foodname.Name = "foodname";
@@ -128,7 +128,7 @@
             // 
             this.rawmaterial.AcceptsReturn = true;
             this.rawmaterial.AcceptsTab = true;
-            this.rawmaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.rawmaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F);
             this.rawmaterial.Location = new System.Drawing.Point(551, 222);
             this.rawmaterial.Multiline = true;
             this.rawmaterial.Name = "rawmaterial";
@@ -140,7 +140,7 @@
             // 
             this.recipe.AcceptsReturn = true;
             this.recipe.AcceptsTab = true;
-            this.recipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.recipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F);
             this.recipe.Location = new System.Drawing.Point(929, 222);
             this.recipe.Multiline = true;
             this.recipe.Name = "recipe";
@@ -150,9 +150,10 @@
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 750);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(1258, 629);
             this.Controls.Add(this.recipe);
             this.Controls.Add(this.rawmaterial);
             this.Controls.Add(this.label3);

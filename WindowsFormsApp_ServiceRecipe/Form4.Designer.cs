@@ -37,7 +37,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(424, 174);
+            this.label2.Location = new System.Drawing.Point(448, 174);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(432, 46);
             this.label2.TabIndex = 9;
@@ -45,6 +45,7 @@
             // 
             // foodname
             // 
+            this.foodname.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F);
             this.foodname.Location = new System.Drawing.Point(456, 256);
             this.foodname.Multiline = true;
             this.foodname.Name = "foodname";
@@ -64,9 +65,10 @@
             // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 750);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(1258, 629);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.foodname);
             this.Controls.Add(this.Delete);

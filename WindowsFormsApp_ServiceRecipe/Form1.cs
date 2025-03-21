@@ -32,18 +32,18 @@ namespace WindowsFormsApp_ServiceRecipe
             if (FoodNames != null && FoodNames.Length > 0)
             {
                 // ล้าง DataGridView ก่อนเพิ่มข้อมูลใหม่
-                Dataview.Rows.Clear();
-                Dataview.Columns.Clear();
+                dataGridView2.Rows.Clear();
+                dataGridView2.Columns.Clear();
 
                 // ก าหนดคอลัมน์เอง
-                Dataview.Columns.Add("FoodID", "รหัสอาหาร");
-                Dataview.Columns.Add("FoodName", "รายชื่อเมนู");
+                dataGridView2.Columns.Add("FoodID", "รหัสอาหาร");
+                dataGridView2.Columns.Add("FoodName", "รายชื่อเมนู");
 
 
                 // เพิ่มข้อมูลเข้าไปทีละแถว
                 foreach (var product in FoodNames)
                 {
-                    Dataview.Rows.Add(product.FoodID, product.FoodName);
+                    dataGridView2.Rows.Add(product.FoodID, product.FoodName);
                 }
             }
             else

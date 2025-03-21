@@ -23,6 +23,15 @@ namespace WindowsFormsApp_ServiceRecipe
         {
             try
             {
+                // ตรวจสอบค่าว่าง
+                if (string.IsNullOrWhiteSpace(foodname.Text) ||
+                    string.IsNullOrWhiteSpace(rawmaterial.Text) ||
+                    string.IsNullOrWhiteSpace(recipe.Text))
+                {
+                    MessageBox.Show("กรุณากรอกข้อมูลให้ครบทุกช่อง", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // หยุดการทำงานหากมีค่าว่าง
+                }
+
                 string FoodName_input = foodname.Text.Trim();
                 string RawMaterial_input = rawmaterial.Text.Trim();
                 string Recipe_input = recipe.Text.Trim();
