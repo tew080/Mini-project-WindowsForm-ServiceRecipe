@@ -36,15 +36,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(448, 174);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(415, 169);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(432, 46);
+            this.label2.Size = new System.Drawing.Size(535, 58);
             this.label2.TabIndex = 9;
             this.label2.Text = "ป้อนชื่ออาหารที่ต้องการลบ";
             // 
             // foodname
             // 
+            this.foodname.BackColor = System.Drawing.Color.Ivory;
             this.foodname.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F);
             this.foodname.Location = new System.Drawing.Point(456, 256);
             this.foodname.Multiline = true;
@@ -54,20 +56,23 @@
             // 
             // Delete
             // 
-            this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.Delete.BackColor = System.Drawing.Color.Ivory;
+            this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.Delete.Location = new System.Drawing.Point(555, 362);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(151, 57);
             this.Delete.TabIndex = 7;
             this.Delete.Text = "ลบข้อมูล";
-            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.UseVisualStyleBackColor = false;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // Form4
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackgroundImage = global::WindowsFormsApp_ServiceRecipe.Properties.Resources._01;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1258, 629);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.foodname);

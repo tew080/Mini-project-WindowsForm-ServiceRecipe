@@ -43,30 +43,33 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label4.Location = new System.Drawing.Point(109, 236);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label4.Location = new System.Drawing.Point(68, 284);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(176, 32);
+            this.label4.Size = new System.Drawing.Size(212, 39);
             this.label4.TabIndex = 21;
-            this.label4.Text = "ป้อน Food_iD";
+            this.label4.Text = "ป้อน ID อาหาร";
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Ivory;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button2.Location = new System.Drawing.Point(129, 363);
+            this.button2.Location = new System.Drawing.Point(102, 413);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(139, 42);
             this.button2.TabIndex = 20;
             this.button2.Text = "แก้ไข";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // foodid
             // 
             this.foodid.AcceptsReturn = true;
             this.foodid.AcceptsTab = true;
+            this.foodid.BackColor = System.Drawing.Color.Ivory;
             this.foodid.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F);
-            this.foodid.Location = new System.Drawing.Point(115, 288);
+            this.foodid.Location = new System.Drawing.Point(88, 338);
             this.foodid.Multiline = true;
             this.foodid.Name = "foodid";
             this.foodid.Size = new System.Drawing.Size(170, 59);
@@ -75,20 +78,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.label1.Location = new System.Drawing.Point(543, 49);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(536, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 46);
+            this.label1.Size = new System.Drawing.Size(247, 58);
             this.label1.TabIndex = 17;
             this.label1.Text = "แก้ไขข้อมูล";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label5.Location = new System.Drawing.Point(347, 169);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label5.Location = new System.Drawing.Point(339, 169);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 32);
+            this.label5.Size = new System.Drawing.Size(196, 39);
             this.label5.TabIndex = 22;
             this.label5.Text = "ป้อนชื่ออาหาร";
             // 
@@ -96,56 +101,61 @@
             // 
             this.foodname.AcceptsReturn = true;
             this.foodname.AcceptsTab = true;
+            this.foodname.BackColor = System.Drawing.Color.Ivory;
             this.foodname.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F);
             this.foodname.Location = new System.Drawing.Point(353, 222);
             this.foodname.Multiline = true;
             this.foodname.Name = "foodname";
             this.foodname.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.foodname.Size = new System.Drawing.Size(161, 242);
+            this.foodname.Size = new System.Drawing.Size(161, 367);
             this.foodname.TabIndex = 23;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label2.Location = new System.Drawing.Point(632, 169);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label2.Location = new System.Drawing.Point(673, 169);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 32);
+            this.label2.Size = new System.Drawing.Size(110, 39);
             this.label2.TabIndex = 24;
-            this.label2.Text = "ป้อนชื่ออาหาร";
+            this.label2.Text = "วัตถุดิบ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label3.Location = new System.Drawing.Point(993, 169);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label3.Location = new System.Drawing.Point(1002, 169);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 32);
+            this.label3.Size = new System.Drawing.Size(153, 39);
             this.label3.TabIndex = 25;
-            this.label3.Text = "ป้อนชื่ออาหาร";
+            this.label3.Text = "สูตรอาหาร";
             // 
             // rawmaterial
             // 
             this.rawmaterial.AcceptsReturn = true;
             this.rawmaterial.AcceptsTab = true;
+            this.rawmaterial.BackColor = System.Drawing.Color.Ivory;
             this.rawmaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F);
             this.rawmaterial.Location = new System.Drawing.Point(551, 222);
             this.rawmaterial.Multiline = true;
             this.rawmaterial.Name = "rawmaterial";
             this.rawmaterial.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.rawmaterial.Size = new System.Drawing.Size(333, 242);
+            this.rawmaterial.Size = new System.Drawing.Size(333, 367);
             this.rawmaterial.TabIndex = 26;
             // 
             // recipe
             // 
             this.recipe.AcceptsReturn = true;
             this.recipe.AcceptsTab = true;
+            this.recipe.BackColor = System.Drawing.Color.Ivory;
             this.recipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F);
             this.recipe.Location = new System.Drawing.Point(929, 222);
             this.recipe.Multiline = true;
             this.recipe.Name = "recipe";
             this.recipe.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.recipe.Size = new System.Drawing.Size(301, 242);
+            this.recipe.Size = new System.Drawing.Size(301, 367);
             this.recipe.TabIndex = 27;
             // 
             // Form3
@@ -153,6 +163,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackgroundImage = global::WindowsFormsApp_ServiceRecipe.Properties.Resources._01;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1258, 629);
             this.Controls.Add(this.recipe);
             this.Controls.Add(this.rawmaterial);
