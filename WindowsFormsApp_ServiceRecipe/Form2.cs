@@ -21,7 +21,6 @@ namespace WindowsFormsApp_ServiceRecipe
 
         private void button2_Click(object sender, EventArgs e)
         {
-
             try
             {
                 string FoodName_input = foodname.Text.Trim();
@@ -31,7 +30,6 @@ namespace WindowsFormsApp_ServiceRecipe
                 // เรียกใช้งาน WCF Service เพื่อเพิ่มสินค้า
                 AddData newData = new AddData
                 {
-
                     FoodName = FoodName_input,
                     RawMaterial = RawMaterial_input,
                     Recipe = Recipe_input
@@ -39,16 +37,17 @@ namespace WindowsFormsApp_ServiceRecipe
 
                 client.AddDataFood(newData);
 
-                MessageBox.Show("Product added successfully!", "Success", MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+                MessageBox.Show("เพิ่มเมนูสำเร็จ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception)
             {
-                MessageBox.Show("ชื่อซ้ำกัน!", "Success", MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+                MessageBox.Show("มีเมนูนี้อยู่แล้ว", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            foodname.Clear();
+            rawmaterial.Clear();
+            recipe.Clear();
         }
     }
-
 }
 

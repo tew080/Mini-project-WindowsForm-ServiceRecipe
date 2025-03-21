@@ -36,16 +36,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label2.Location = new System.Drawing.Point(225, 158);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(424, 174);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(361, 38);
+            this.label2.Size = new System.Drawing.Size(432, 46);
             this.label2.TabIndex = 9;
             this.label2.Text = "ป้อนชื่ออาหารที่ต้องการลบ";
             // 
             // foodname
             // 
-            this.foodname.Location = new System.Drawing.Point(232, 224);
+            this.foodname.Location = new System.Drawing.Point(456, 256);
             this.foodname.Multiline = true;
             this.foodname.Name = "foodname";
             this.foodname.Size = new System.Drawing.Size(342, 65);
@@ -54,7 +54,7 @@
             // Delete
             // 
             this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.Delete.Location = new System.Drawing.Point(331, 332);
+            this.Delete.Location = new System.Drawing.Point(555, 362);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(151, 57);
             this.Delete.TabIndex = 7;
@@ -66,7 +66,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 545);
+            this.ClientSize = new System.Drawing.Size(1258, 750);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.foodname);
             this.Controls.Add(this.Delete);

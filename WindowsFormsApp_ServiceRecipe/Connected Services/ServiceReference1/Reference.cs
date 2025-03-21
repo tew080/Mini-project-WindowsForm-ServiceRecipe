@@ -318,10 +318,10 @@ namespace WindowsFormsApp_ServiceRecipe.ServiceReference1 {
         System.Threading.Tasks.Task UpdateDataFoodAsync(WindowsFormsApp_ServiceRecipe.ServiceReference1.SearchAndUpdate update_data_food);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteDataFood", ReplyAction="http://tempuri.org/IService1/DeleteDataFoodResponse")]
-        void DeleteDataFood(WindowsFormsApp_ServiceRecipe.ServiceReference1.DeleteData delete_data_food);
+        bool DeleteDataFood(WindowsFormsApp_ServiceRecipe.ServiceReference1.DeleteData delete_data_food);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteDataFood", ReplyAction="http://tempuri.org/IService1/DeleteDataFoodResponse")]
-        System.Threading.Tasks.Task DeleteDataFoodAsync(WindowsFormsApp_ServiceRecipe.ServiceReference1.DeleteData delete_data_food);
+        System.Threading.Tasks.Task<bool> DeleteDataFoodAsync(WindowsFormsApp_ServiceRecipe.ServiceReference1.DeleteData delete_data_food);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -383,11 +383,11 @@ namespace WindowsFormsApp_ServiceRecipe.ServiceReference1 {
             return base.Channel.UpdateDataFoodAsync(update_data_food);
         }
         
-        public void DeleteDataFood(WindowsFormsApp_ServiceRecipe.ServiceReference1.DeleteData delete_data_food) {
-            base.Channel.DeleteDataFood(delete_data_food);
+        public bool DeleteDataFood(WindowsFormsApp_ServiceRecipe.ServiceReference1.DeleteData delete_data_food) {
+            return base.Channel.DeleteDataFood(delete_data_food);
         }
         
-        public System.Threading.Tasks.Task DeleteDataFoodAsync(WindowsFormsApp_ServiceRecipe.ServiceReference1.DeleteData delete_data_food) {
+        public System.Threading.Tasks.Task<bool> DeleteDataFoodAsync(WindowsFormsApp_ServiceRecipe.ServiceReference1.DeleteData delete_data_food) {
             return base.Channel.DeleteDataFoodAsync(delete_data_food);
         }
     }

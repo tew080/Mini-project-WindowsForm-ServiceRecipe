@@ -48,7 +48,7 @@ namespace WindowsFormsApp_ServiceRecipe
             }
             else
             {
-                MessageBox.Show("No FoodNames found.", "Info", MessageBoxButtons.OK,
+                MessageBox.Show("ไม่พบเมนูในขณะนี้", "Info", MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
 
             }
@@ -87,7 +87,6 @@ namespace WindowsFormsApp_ServiceRecipe
         private void button1_Click(object sender, EventArgs e)
         {
             ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
-
             {
                 string menuName = txtSearchMenu.Text; // รับค่าจากช่องค้นหา
 
@@ -99,23 +98,20 @@ namespace WindowsFormsApp_ServiceRecipe
                 {
                     // ล้าง DataGridView ก่อนเพิ่มข้อมูลใหม่
                     dataGridView1.Rows.Clear();
-
                     dataGridView1.Columns.Clear();
-
-                    // txtMethod.Text = food.Recipe; // แสดงวิธีทำ
-                    // txtraw.Text = food.RawMaterial; // แสดงวัตถุดิบ
 
                     dataGridView1.Columns.Add("FoodName", "ชื่ออาหาร");
                     dataGridView1.Columns.Add("RawMaterial", "วัตถุดิบ");
                     dataGridView1.Columns.Add("Recipe", "สูตรอาหาร");
 
                     dataGridView1.Rows.Add(food.FoodName, food.RawMaterial, food.Recipe);
-
                 }
                 else
                 {
-                    MessageBox.Show("ไม่พบเมนูนี้", "แจ้งเตือน", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("ไม่พบเมนูนี้", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+
+                txtSearchMenu.Clear();
             }
         }
     }

@@ -157,7 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 545);
+            this.ClientSize = new System.Drawing.Size(1258, 750);
             this.Controls.Add(this.foodname);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
