@@ -125,9 +125,9 @@
             this.label1.Location = new System.Drawing.Point(352, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(670, 58);
+            this.label1.Size = new System.Drawing.Size(673, 58);
             this.label1.TabIndex = 11;
-            this.label1.Text = "โปรแกรมแสดงสูตรการทำอาหาร ";
+            this.label1.Text = "ระบบค้นหาสูตรอาหารและวัสถุดิบ";
             // 
             // dataGridView2
             // 

@@ -13,25 +13,30 @@ namespace WindowsFormsApp_ServiceRecipe
 {
     public partial class Form1_Index : Form
     {
+        /*
+         * ประกาศการเรียกใช้ WCF Service ServiceWikiFood ที่สามารถเรียกใช้ได้ทั้ง from
+         */
         ServiceWikiFood.Service1Client client = new ServiceWikiFood.Service1Client();
         public Form1_Index()
         {
             InitializeComponent();
         }
 
+        /*
+         * Button GetAllFoodName จะเรียกใช้ Service GetAllFoodName และ ดึงค่าจาก DataMember ShowAll[] ที่เก็บ FoodID และ FoodName
+         * โดย ถ้า มีข้อมูลอาหาร มากกว่า 0 ถ้าตรงตามเงื่อนไข ล้างข้อมูลที่แสดงก่อนหน่าโดยใช้ .Rows.Clear(); และ .Columns.Clear(); 
+         * ต่อจากนั้นจะ ดึงข้อมูล จาก  Columns FoodID และ FoodName เเละจะเรียกแสดงข้อมูลทีละแถว โดยใช้การวนรอบ foreach 
+         * หรือ หากไม่ตรงกับเงื่อนไขข้างบน จะโชว์ MessageBox แสดง ไม่พบเมนูในขณะนี้", "Info"
+         */
         private void GetAllFoodName_Click(object sender, EventArgs e)
         {
-            // เรียกใช้ WCF Service เพื่อดึงรายการ Food
             ShowAll[] FoodNames = client.ShowAllFoods();
             if (FoodNames != null && FoodNames.Length > 0)
             {
-                // ล้าง DataGridView ก่อนเพิ่มข้อมูลใหม่
                 dataGridView2.Rows.Clear();
                 dataGridView2.Columns.Clear();
-                // กำหนดคอลัมน์เอง
                 dataGridView2.Columns.Add("FoodID", "รหัสอาหาร");
                 dataGridView2.Columns.Add("FoodName", "รายชื่อเมนู");
-                // เพิ่มข้อมูลเข้าไปทีละแถว
                 foreach (var Food in FoodNames)
                 {
                     dataGridView2.Rows.Add(Food.FoodID, Food.FoodName);
@@ -39,40 +44,52 @@ namespace WindowsFormsApp_ServiceRecipe
             }
             else
             {
-                MessageBox.Show("ไม่พบเมนูในขณะนี้", "Info", MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+                MessageBox.Show("ไม่พบเมนูในขณะนี้", "Info", MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
+
+        /*
+         * Button SearchFoodName จะเรียกใช้ Service SearchFoodName ดึงค่าจาก DataMember SearchAndUpdate ที่เก็บ FoodName, RawMaterial, Recipe
+         * และ รับค่าชื่อเมนู หรือ idเมนู เพื่อค้นหา วัตถุดิบและสูตรอาหาร 
+         * โดย ถ้า มีข้อมูลอาหาร จะล้างข้อมูลที่แสดงก่อนหน้าโดยใช้ richTextBox1.Clear();
+         * โดยใช้ richTextBox เป็นตัวแสดงผลซื่งช่วยให้การแสดง วัตถุดิบและสูตรอาหาร มีรูปแบบที่อ่านง่ายและรองรับข้อความที่มีขนาดยาว 
+         * และใช้.AppendText();เพื่อให้แสดงผลได้ต่อเนื่องกัน 
+         * และหากไม่พบข้อมูล จะโชว์ MessageBox แสดง "ไม่พบเมนูนี้", "Error"
+         * และจะล้างข้อความก่อนหน้าของ txtSearchMenu.Text;
+         */
         private void SearchFoodName_Click(object sender, EventArgs e)
-        {
+        { 
             {
-                string menuName = txtSearchMenu.Text; // รับค่าจากช่องค้นหา
+                string menuName = txtSearchMenu.Text; 
                 SearchAndUpdate food = client.SearchFoodName(menuName);
                 if (food != null)
                 {
-                    // ล้าง RichTextBox ก่อนเพิ่มข้อมูลใหม่
                     richTextBox1.Clear();
 
-                    // AppendText ใช้สำหรับเพิ่มข้อความต่อท้ายข้อความเดิมที่มีอยู่แล้วในคอนโทรล RichTextBox
                     richTextBox1.AppendText("------------------------------\n⬇️⬇️⬇️ชื่ออาหาร⬇️⬇️⬇️\n------------------------------\n : " + food.FoodName + "\n------------------------------\n\n");
                     richTextBox1.AppendText("------------------------------\n⬇️⬇️⬇️วัตถุดิบ⬇️⬇️⬇️\n------------------------------\n" + food.RawMaterial + "\n------------------------------\n\n");
                     richTextBox1.AppendText("------------------------------\n⬇️⬇️⬇️สูตรอาหาร⬇️⬇️⬇️\n------------------------------\n" + food.Recipe);
                 }
                 else
                 {
-                    MessageBox.Show("ไม่พบเมนูนี้", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("ไม่พบเมนูนี้", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 txtSearchMenu.Clear();
             }
         }
 
+        /*
+         * Button Form x _AddDataFood_Click, Button Form x _UpdateDataFood_Click, Button Form x _DeleteDataFood_Click 
+         * จะเป็นการสลับไปยังfromที่ต้องการ โดยกำหนด Object = Form x _AddDataFood โดยจะเรีดกใช้ด้วยตัวแปร  SwitchToform2
+         * SwitchToform x .Show(); จะเป็นการโชว์ Form x _AddDataFood
+         * และจะซ้อน from ก่อนหน้านี้โดยใช้ this.Hide(); 
+         * และเมื่อปิก from ปัจจุบัน จะทำการโชว์ from ที่ปิดไปก่อนหน้าขึ้นมา SwitchToform x .FormClosed += (s, args) => this.Show();
+         */
         private void Form2_AddDataFood_Click(object sender, EventArgs e)
         {
             Form2_AddDataFood SwitchToform2 = new Form2_AddDataFood();
             SwitchToform2.Show();
-            // ซ่อนฟอร์มแรก
             this.Hide(); 
-            // เพิ่ม event handler เมื่อฟอร์ม 2 ถูกปิด ให้แสดงฟอร์ม 1 อีกครั้ง
             SwitchToform2.FormClosed += (s, args) => this.Show();
         }
         private void Form3_UpdateDataFood_Click(object sender, EventArgs e)
