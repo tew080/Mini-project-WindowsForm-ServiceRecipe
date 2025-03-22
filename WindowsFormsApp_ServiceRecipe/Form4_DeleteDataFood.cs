@@ -26,7 +26,7 @@ namespace WindowsFormsApp_ServiceRecipe
          * Button DeleteDataFood
          * string xxx = xxx.Text.Trim(); TextBox รับค่า เป็น string และ ลบช่องว่างหน้าสุดกับหลังสุดออกโดยใช้ Trim();
          * ดึงค่าจาก DataMember DeleteData ที่เก็บ FoodName
-         * หลังจากนั้น จะเรียกใช้ Service UpdateDataFood เป็น bool ที่สามาถส่งค่ากลับได้
+         * หลังจากนั้น จะเรียกใช้ Service UpdateDataFood เป็น bool ที่สามาถส่งค่ากลับได้ (True/False)
          * หากเพิ่มข้อมูลสำเร็จ จะโชว์ MessageBox แสดง "ลบข้อมูลสำเร็จ", "Success"
          * หรือ นอกเหนือจากนี้ จะโชว์ MessageBox แสดง "โปรดป้อนชื่ออาหารที่ต้องการลบ หรือ ไม่มีชื่อเมนูที่ต้องการลบ", "Warning"
          * หากไม่สำเร็จจะมีการตรวจสอบข้อผิดพลาดจาก catch (Exception ex) และ จะโชว์ MessageBox แสดง "เกิดข้อผิดพลาด: " + ex.Message, "Error"
