@@ -37,14 +37,13 @@ namespace WindowsFormsApp_ServiceRecipe
         {
             try
             {
-                // ตรวจสอบค่าว่าง
                 if (string.IsNullOrWhiteSpace(foodid.Text) || 
                     string.IsNullOrWhiteSpace(foodname.Text) ||
                     string.IsNullOrWhiteSpace(rawmaterial.Text) ||
                     string.IsNullOrWhiteSpace(recipe.Text))
                 {
                     MessageBox.Show("กรุณากรอกข้อมูลให้ครบทุกช่อง", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return; // หยุดการทำงานหากมีค่าว่าง
+                    return;
                 }
                 int foodId = int.Parse(foodid.Text);
                 string FoodName_input = foodname.Text.Trim();
@@ -57,7 +56,6 @@ namespace WindowsFormsApp_ServiceRecipe
                     RawMaterial = RawMaterial_input,
                     Recipe = Recipe_input
                 };
-                // เรียกใช้เมทอด UpdateDataFood เพื่ออัปเดตข้อมูล
                 client.UpdateDataFood(updata);
                 MessageBox.Show("อัพเดทเมนูสำเร็จ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
