@@ -7,19 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp_ServiceRecipe.ServiceReference1;
+using WindowsFormsApp_ServiceRecipe.ServiceWikiFood;
 
 namespace WindowsFormsApp_ServiceRecipe
 {
-    public partial class Form4 : Form
+    public partial class Form4_DeleteDataFood : Form
     {
-        ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
-        public Form4()
+        ServiceWikiFood.Service1Client client = new ServiceWikiFood.Service1Client();
+        public Form4_DeleteDataFood()
         {
             InitializeComponent();
         }
 
-        private void Delete_Click(object sender, EventArgs e)
+        private void DeleteDataFood_Click(object sender, EventArgs e)
         {
             try
             {
@@ -46,9 +46,7 @@ namespace WindowsFormsApp_ServiceRecipe
             {
                 MessageBox.Show("เกิดข้อผิดพลาด: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
             foodname.Clear();
-
         }
     }
 }

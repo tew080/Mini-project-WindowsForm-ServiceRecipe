@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsFormsApp_ServiceRecipe.ServiceReference1 {
+namespace WindowsFormsApp_ServiceRecipe.ServiceWikiFood {
     using System.Runtime.Serialization;
     using System;
     
@@ -290,47 +290,47 @@ namespace WindowsFormsApp_ServiceRecipe.ServiceReference1 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceWikiFood.IService1")]
     public interface IService1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ShowAllFoods", ReplyAction="http://tempuri.org/IService1/ShowAllFoodsResponse")]
-        WindowsFormsApp_ServiceRecipe.ServiceReference1.ShowAll[] ShowAllFoods();
+        WindowsFormsApp_ServiceRecipe.ServiceWikiFood.ShowAll[] ShowAllFoods();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ShowAllFoods", ReplyAction="http://tempuri.org/IService1/ShowAllFoodsResponse")]
-        System.Threading.Tasks.Task<WindowsFormsApp_ServiceRecipe.ServiceReference1.ShowAll[]> ShowAllFoodsAsync();
+        System.Threading.Tasks.Task<WindowsFormsApp_ServiceRecipe.ServiceWikiFood.ShowAll[]> ShowAllFoodsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SearchFoodName", ReplyAction="http://tempuri.org/IService1/SearchFoodNameResponse")]
-        WindowsFormsApp_ServiceRecipe.ServiceReference1.SearchAndUpdate SearchFoodName(string input_foodname);
+        WindowsFormsApp_ServiceRecipe.ServiceWikiFood.SearchAndUpdate SearchFoodName(string input_foodname);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SearchFoodName", ReplyAction="http://tempuri.org/IService1/SearchFoodNameResponse")]
-        System.Threading.Tasks.Task<WindowsFormsApp_ServiceRecipe.ServiceReference1.SearchAndUpdate> SearchFoodNameAsync(string input_foodname);
+        System.Threading.Tasks.Task<WindowsFormsApp_ServiceRecipe.ServiceWikiFood.SearchAndUpdate> SearchFoodNameAsync(string input_foodname);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddDataFood", ReplyAction="http://tempuri.org/IService1/AddDataFoodResponse")]
-        void AddDataFood(WindowsFormsApp_ServiceRecipe.ServiceReference1.AddData add_data_food);
+        void AddDataFood(WindowsFormsApp_ServiceRecipe.ServiceWikiFood.AddData add_data_food);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddDataFood", ReplyAction="http://tempuri.org/IService1/AddDataFoodResponse")]
-        System.Threading.Tasks.Task AddDataFoodAsync(WindowsFormsApp_ServiceRecipe.ServiceReference1.AddData add_data_food);
+        System.Threading.Tasks.Task AddDataFoodAsync(WindowsFormsApp_ServiceRecipe.ServiceWikiFood.AddData add_data_food);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateDataFood", ReplyAction="http://tempuri.org/IService1/UpdateDataFoodResponse")]
-        void UpdateDataFood(WindowsFormsApp_ServiceRecipe.ServiceReference1.SearchAndUpdate update_data_food);
+        void UpdateDataFood(WindowsFormsApp_ServiceRecipe.ServiceWikiFood.SearchAndUpdate update_data_food);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateDataFood", ReplyAction="http://tempuri.org/IService1/UpdateDataFoodResponse")]
-        System.Threading.Tasks.Task UpdateDataFoodAsync(WindowsFormsApp_ServiceRecipe.ServiceReference1.SearchAndUpdate update_data_food);
+        System.Threading.Tasks.Task UpdateDataFoodAsync(WindowsFormsApp_ServiceRecipe.ServiceWikiFood.SearchAndUpdate update_data_food);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteDataFood", ReplyAction="http://tempuri.org/IService1/DeleteDataFoodResponse")]
-        bool DeleteDataFood(WindowsFormsApp_ServiceRecipe.ServiceReference1.DeleteData delete_data_food);
+        bool DeleteDataFood(WindowsFormsApp_ServiceRecipe.ServiceWikiFood.DeleteData delete_data_food);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteDataFood", ReplyAction="http://tempuri.org/IService1/DeleteDataFoodResponse")]
-        System.Threading.Tasks.Task<bool> DeleteDataFoodAsync(WindowsFormsApp_ServiceRecipe.ServiceReference1.DeleteData delete_data_food);
+        System.Threading.Tasks.Task<bool> DeleteDataFoodAsync(WindowsFormsApp_ServiceRecipe.ServiceWikiFood.DeleteData delete_data_food);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IService1Channel : WindowsFormsApp_ServiceRecipe.ServiceReference1.IService1, System.ServiceModel.IClientChannel {
+    public interface IService1Channel : WindowsFormsApp_ServiceRecipe.ServiceWikiFood.IService1, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class Service1Client : System.ServiceModel.ClientBase<WindowsFormsApp_ServiceRecipe.ServiceReference1.IService1>, WindowsFormsApp_ServiceRecipe.ServiceReference1.IService1 {
+    public partial class Service1Client : System.ServiceModel.ClientBase<WindowsFormsApp_ServiceRecipe.ServiceWikiFood.IService1>, WindowsFormsApp_ServiceRecipe.ServiceWikiFood.IService1 {
         
         public Service1Client() {
         }
@@ -351,43 +351,43 @@ namespace WindowsFormsApp_ServiceRecipe.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public WindowsFormsApp_ServiceRecipe.ServiceReference1.ShowAll[] ShowAllFoods() {
+        public WindowsFormsApp_ServiceRecipe.ServiceWikiFood.ShowAll[] ShowAllFoods() {
             return base.Channel.ShowAllFoods();
         }
         
-        public System.Threading.Tasks.Task<WindowsFormsApp_ServiceRecipe.ServiceReference1.ShowAll[]> ShowAllFoodsAsync() {
+        public System.Threading.Tasks.Task<WindowsFormsApp_ServiceRecipe.ServiceWikiFood.ShowAll[]> ShowAllFoodsAsync() {
             return base.Channel.ShowAllFoodsAsync();
         }
         
-        public WindowsFormsApp_ServiceRecipe.ServiceReference1.SearchAndUpdate SearchFoodName(string input_foodname) {
+        public WindowsFormsApp_ServiceRecipe.ServiceWikiFood.SearchAndUpdate SearchFoodName(string input_foodname) {
             return base.Channel.SearchFoodName(input_foodname);
         }
         
-        public System.Threading.Tasks.Task<WindowsFormsApp_ServiceRecipe.ServiceReference1.SearchAndUpdate> SearchFoodNameAsync(string input_foodname) {
+        public System.Threading.Tasks.Task<WindowsFormsApp_ServiceRecipe.ServiceWikiFood.SearchAndUpdate> SearchFoodNameAsync(string input_foodname) {
             return base.Channel.SearchFoodNameAsync(input_foodname);
         }
         
-        public void AddDataFood(WindowsFormsApp_ServiceRecipe.ServiceReference1.AddData add_data_food) {
+        public void AddDataFood(WindowsFormsApp_ServiceRecipe.ServiceWikiFood.AddData add_data_food) {
             base.Channel.AddDataFood(add_data_food);
         }
         
-        public System.Threading.Tasks.Task AddDataFoodAsync(WindowsFormsApp_ServiceRecipe.ServiceReference1.AddData add_data_food) {
+        public System.Threading.Tasks.Task AddDataFoodAsync(WindowsFormsApp_ServiceRecipe.ServiceWikiFood.AddData add_data_food) {
             return base.Channel.AddDataFoodAsync(add_data_food);
         }
         
-        public void UpdateDataFood(WindowsFormsApp_ServiceRecipe.ServiceReference1.SearchAndUpdate update_data_food) {
+        public void UpdateDataFood(WindowsFormsApp_ServiceRecipe.ServiceWikiFood.SearchAndUpdate update_data_food) {
             base.Channel.UpdateDataFood(update_data_food);
         }
         
-        public System.Threading.Tasks.Task UpdateDataFoodAsync(WindowsFormsApp_ServiceRecipe.ServiceReference1.SearchAndUpdate update_data_food) {
+        public System.Threading.Tasks.Task UpdateDataFoodAsync(WindowsFormsApp_ServiceRecipe.ServiceWikiFood.SearchAndUpdate update_data_food) {
             return base.Channel.UpdateDataFoodAsync(update_data_food);
         }
         
-        public bool DeleteDataFood(WindowsFormsApp_ServiceRecipe.ServiceReference1.DeleteData delete_data_food) {
+        public bool DeleteDataFood(WindowsFormsApp_ServiceRecipe.ServiceWikiFood.DeleteData delete_data_food) {
             return base.Channel.DeleteDataFood(delete_data_food);
         }
         
-        public System.Threading.Tasks.Task<bool> DeleteDataFoodAsync(WindowsFormsApp_ServiceRecipe.ServiceReference1.DeleteData delete_data_food) {
+        public System.Threading.Tasks.Task<bool> DeleteDataFoodAsync(WindowsFormsApp_ServiceRecipe.ServiceWikiFood.DeleteData delete_data_food) {
             return base.Channel.DeleteDataFoodAsync(delete_data_food);
         }
     }

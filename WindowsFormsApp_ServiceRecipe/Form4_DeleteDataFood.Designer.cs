@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp_ServiceRecipe
 {
-    partial class Form4
+    partial class Form4_DeleteDataFood
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4_DeleteDataFood));
             this.label2 = new System.Windows.Forms.Label();
             this.foodname = new System.Windows.Forms.TextBox();
             this.Delete = new System.Windows.Forms.Button();
@@ -53,6 +54,7 @@
             this.foodname.Name = "foodname";
             this.foodname.Size = new System.Drawing.Size(342, 65);
             this.foodname.TabIndex = 8;
+            this.foodname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Delete
             // 
@@ -64,21 +66,22 @@
             this.Delete.TabIndex = 7;
             this.Delete.Text = "ลบข้อมูล";
             this.Delete.UseVisualStyleBackColor = false;
-            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            this.Delete.Click += new System.EventHandler(this.DeleteDataFood_Click);
             // 
-            // Form4
+            // Form4_DeleteDataFood
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.BackgroundImage = global::WindowsFormsApp_ServiceRecipe.Properties.Resources._01;
+            this.BackgroundImage = global::WindowsFormsApp_ServiceRecipe.Properties.Resources._04;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1258, 629);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.foodname);
             this.Controls.Add(this.Delete);
-            this.Name = "Form4";
-            this.Text = "Form4";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Form4_DeleteDataFood";
+            this.Text = "DeleteDataFood";
             this.ResumeLayout(false);
             this.PerformLayout();
 

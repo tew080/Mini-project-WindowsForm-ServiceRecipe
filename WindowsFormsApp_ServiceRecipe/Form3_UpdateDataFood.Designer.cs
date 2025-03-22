@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp_ServiceRecipe
 {
-    partial class Form3
+    partial class Form3_UpdateDataFood
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3_UpdateDataFood));
             this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.foodid = new System.Windows.Forms.TextBox();
@@ -44,10 +45,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label4.Location = new System.Drawing.Point(68, 284);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(38, 277);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(212, 39);
+            this.label4.Size = new System.Drawing.Size(309, 58);
             this.label4.TabIndex = 21;
             this.label4.Text = "ป้อน ID อาหาร";
             // 
@@ -61,7 +62,7 @@
             this.button2.TabIndex = 20;
             this.button2.Text = "แก้ไข";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.UpdateDataFood_Click);
             // 
             // foodid
             // 
@@ -74,6 +75,7 @@
             this.foodid.Name = "foodid";
             this.foodid.Size = new System.Drawing.Size(170, 59);
             this.foodid.TabIndex = 18;
+            this.foodid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -90,10 +92,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label5.Location = new System.Drawing.Point(339, 169);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(313, 150);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(196, 39);
+            this.label5.Size = new System.Drawing.Size(287, 58);
             this.label5.TabIndex = 22;
             this.label5.Text = "ป้อนชื่ออาหาร";
             // 
@@ -109,15 +111,16 @@
             this.foodname.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.foodname.Size = new System.Drawing.Size(161, 367);
             this.foodname.TabIndex = 23;
+            this.foodname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label2.Location = new System.Drawing.Point(673, 169);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(655, 150);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 39);
+            this.label2.Size = new System.Drawing.Size(161, 58);
             this.label2.TabIndex = 24;
             this.label2.Text = "วัตถุดิบ";
             // 
@@ -125,10 +128,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label3.Location = new System.Drawing.Point(1002, 169);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(980, 150);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 39);
+            this.label3.Size = new System.Drawing.Size(225, 58);
             this.label3.TabIndex = 25;
             this.label3.Text = "สูตรอาหาร";
             // 
@@ -144,6 +147,7 @@
             this.rawmaterial.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.rawmaterial.Size = new System.Drawing.Size(333, 367);
             this.rawmaterial.TabIndex = 26;
+            this.rawmaterial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // recipe
             // 
@@ -157,13 +161,14 @@
             this.recipe.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.recipe.Size = new System.Drawing.Size(301, 367);
             this.recipe.TabIndex = 27;
+            this.recipe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Form3
+            // Form3_UpdateDataFood
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.BackgroundImage = global::WindowsFormsApp_ServiceRecipe.Properties.Resources._01;
+            this.BackgroundImage = global::WindowsFormsApp_ServiceRecipe.Properties.Resources._04;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1258, 629);
             this.Controls.Add(this.recipe);
@@ -176,8 +181,9 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.foodid);
             this.Controls.Add(this.label1);
-            this.Name = "Form3";
-            this.Text = "Form3";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Form3_UpdateDataFood";
+            this.Text = "UpdateDataFood";
             this.ResumeLayout(false);
             this.PerformLayout();
 

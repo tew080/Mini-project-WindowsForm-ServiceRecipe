@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp_ServiceRecipe
 {
-    partial class Form2
+    partial class Form2_AddDataFood
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2_AddDataFood));
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.foodname = new System.Windows.Forms.TextBox();
@@ -43,6 +44,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label2.Location = new System.Drawing.Point(486, 18);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -61,7 +63,7 @@
             this.button2.TabIndex = 15;
             this.button2.Text = "เพิ่ม";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.AddDataFood_Click);
             // 
             // foodname
             // 
@@ -98,6 +100,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label1.Location = new System.Drawing.Point(108, 186);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 58);
@@ -141,12 +144,12 @@
             this.rawmaterial.TabIndex = 22;
             this.rawmaterial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Form2
+            // Form2_AddDataFood
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.BackgroundImage = global::WindowsFormsApp_ServiceRecipe.Properties.Resources._01;
+            this.BackgroundImage = global::WindowsFormsApp_ServiceRecipe.Properties.Resources._04;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1258, 629);
             this.Controls.Add(this.rawmaterial);
@@ -157,8 +160,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.foodname);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Form2_AddDataFood";
+            this.Text = "AddDataFood";
             this.ResumeLayout(false);
             this.PerformLayout();
 

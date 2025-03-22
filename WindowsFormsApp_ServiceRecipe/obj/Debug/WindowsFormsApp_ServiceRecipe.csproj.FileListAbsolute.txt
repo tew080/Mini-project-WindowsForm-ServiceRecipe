@@ -25,10 +25,6 @@ E:\wikifood\Mini-project-WindowsForm-ServiceRecipe-main\WindowsFormsApp_ServiceR
 E:\wikifood\Mini-project-WindowsForm-ServiceRecipe-main\WindowsFormsApp_ServiceRecipe\obj\Debug\WindowsFormsApp_ServiceRecipe.exe
 E:\wikifood\Mini-project-WindowsForm-ServiceRecipe-main\WindowsFormsApp_ServiceRecipe\obj\Debug\WindowsFormsApp_ServiceRecipe.pdb
 C:\Users\thamm\OneDrive\Desktop\เว็ปเซอร์วิส\GitHub\Mini-project-WindowsForm-ServiceRecipe\WindowsFormsApp_ServiceRecipe\obj\Debug\WindowsFormsApp_ServiceRecipe.csproj.AssemblyReference.cache
-C:\Users\thamm\OneDrive\Desktop\เว็ปเซอร์วิส\GitHub\Mini-project-WindowsForm-ServiceRecipe\WindowsFormsApp_ServiceRecipe\obj\Debug\WindowsFormsApp_ServiceRecipe.Form1.resources
-C:\Users\thamm\OneDrive\Desktop\เว็ปเซอร์วิส\GitHub\Mini-project-WindowsForm-ServiceRecipe\WindowsFormsApp_ServiceRecipe\obj\Debug\WindowsFormsApp_ServiceRecipe.Form2.resources
-C:\Users\thamm\OneDrive\Desktop\เว็ปเซอร์วิส\GitHub\Mini-project-WindowsForm-ServiceRecipe\WindowsFormsApp_ServiceRecipe\obj\Debug\WindowsFormsApp_ServiceRecipe.Form3.resources
-C:\Users\thamm\OneDrive\Desktop\เว็ปเซอร์วิส\GitHub\Mini-project-WindowsForm-ServiceRecipe\WindowsFormsApp_ServiceRecipe\obj\Debug\WindowsFormsApp_ServiceRecipe.Form4.resources
 C:\Users\thamm\OneDrive\Desktop\เว็ปเซอร์วิส\GitHub\Mini-project-WindowsForm-ServiceRecipe\WindowsFormsApp_ServiceRecipe\obj\Debug\WindowsFormsApp_ServiceRecipe.Properties.Resources.resources
 C:\Users\thamm\OneDrive\Desktop\เว็ปเซอร์วิส\GitHub\Mini-project-WindowsForm-ServiceRecipe\WindowsFormsApp_ServiceRecipe\obj\Debug\WindowsFormsApp_ServiceRecipe.csproj.GenerateResource.cache
 C:\Users\thamm\OneDrive\Desktop\เว็ปเซอร์วิส\GitHub\Mini-project-WindowsForm-ServiceRecipe\WindowsFormsApp_ServiceRecipe\obj\Debug\WindowsFormsApp_ServiceRecipe.csproj.CoreCompileInputs.cache
@@ -37,3 +33,7 @@ C:\Users\thamm\OneDrive\Desktop\เว็ปเซอร์วิส\GitHub\Mini
 C:\Users\thamm\OneDrive\Desktop\เว็ปเซอร์วิส\GitHub\Mini-project-WindowsForm-ServiceRecipe\WindowsFormsApp_ServiceRecipe\bin\Debug\WindowsFormsApp_ServiceRecipe.pdb
 C:\Users\thamm\OneDrive\Desktop\เว็ปเซอร์วิส\GitHub\Mini-project-WindowsForm-ServiceRecipe\WindowsFormsApp_ServiceRecipe\obj\Debug\WindowsFormsApp_ServiceRecipe.exe
 C:\Users\thamm\OneDrive\Desktop\เว็ปเซอร์วิส\GitHub\Mini-project-WindowsForm-ServiceRecipe\WindowsFormsApp_ServiceRecipe\obj\Debug\WindowsFormsApp_ServiceRecipe.pdb
+C:\Users\thamm\OneDrive\Desktop\เว็ปเซอร์วิส\GitHub\Mini-project-WindowsForm-ServiceRecipe\WindowsFormsApp_ServiceRecipe\obj\Debug\WindowsFormsApp_ServiceRecipe.Form1_Index.resources
+C:\Users\thamm\OneDrive\Desktop\เว็ปเซอร์วิส\GitHub\Mini-project-WindowsForm-ServiceRecipe\WindowsFormsApp_ServiceRecipe\obj\Debug\WindowsFormsApp_ServiceRecipe.Form2_AddDataFood.resources
+C:\Users\thamm\OneDrive\Desktop\เว็ปเซอร์วิส\GitHub\Mini-project-WindowsForm-ServiceRecipe\WindowsFormsApp_ServiceRecipe\obj\Debug\WindowsFormsApp_ServiceRecipe.Form3_UpdateDataFood.resources
+C:\Users\thamm\OneDrive\Desktop\เว็ปเซอร์วิส\GitHub\Mini-project-WindowsForm-ServiceRecipe\WindowsFormsApp_ServiceRecipe\obj\Debug\WindowsFormsApp_ServiceRecipe.Form4_DeleteDataFood.resources
